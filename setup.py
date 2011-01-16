@@ -13,7 +13,7 @@ install_requires = [
 ]
 
 setup(
-    name = "django-oembed",
+    name = "django-oembedplugin",
     version = version,
     url = 'http://github.com/lucasvo/django-oembed',
     license = 'BSD',
