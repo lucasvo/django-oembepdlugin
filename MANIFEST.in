@@ -1,0 +1,7 @@
+include AUTHORS
+include LICENSE
+include README.rst
+include HISTORY
+recursive-include oembedplugin/templates *
+recursive-include oembedplugin/media *
+
