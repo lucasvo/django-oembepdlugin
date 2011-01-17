@@ -9,9 +9,9 @@ class CMSOembedPlugin(CMSPluginBase):
         render_template = "oembedplugin/object.html"
 
         def render(self, context, instance, placeholder):
-                context.update({'oembed':instance.oembedplugin, 
-                                                'object':instance,
-                                                'placeholder':placeholder})
-                return context
-
+            context.update({'oembed':instance.oembedplugin, 
+                                         'object':instance,
+                                         'placeholder':placeholder})
+            return context
+                
 plugin_pool.register_plugin(CMSOembedPlugin)

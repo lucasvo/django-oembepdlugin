@@ -20,7 +20,6 @@ class JSONField(models.TextField):
                 return json.loads(value)
         except ValueError:
             pass
-
         return value
 
     def get_db_prep_save(self, value):
@@ -30,7 +29,6 @@ class JSONField(models.TextField):
             return None
         else:
             value = json.dumps(value, cls=DjangoJSONEncoder)
-
         return super(JSONField, self).get_db_prep_save(value)
 
 # rules for South migrations tool (for version >= 0.7)

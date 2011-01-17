@@ -31,7 +31,7 @@ class Command(BaseCommand):
             service_model, created = OembedService.objects.get_or_create(name=service['name'])
             for key in MODEL_KEYS:
                 setattr(service_model, key, service[key])
-            
+
             service_model.save()
             service_names.append(service['name'])
 

@@ -1,1 +1,10 @@
-{{ resource.html|safe }}
+{% if oembed.show_title %}
+<h4>{{ oembed.title }}</h4>
+{% endif %}
+
+{% block object %}
+{% if oembed.type == 'photo' %}
+{% if object.link_embed %}<a href="{{ oembed.provider_url }}">{% endif %}<img src="{{ oembed.url }}" width="{{ oembed.width }}" height="{{ oembed.height }}" alt="{{ oembed.title }}" />{% if oembed.link_embed %}</a>{% endif %} 
+{% endif %}
+{% endblock %}
+
